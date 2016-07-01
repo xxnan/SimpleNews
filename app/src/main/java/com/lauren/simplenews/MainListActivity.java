@@ -13,11 +13,14 @@ import android.widget.BaseAdapter;
 import android.widget.ListView;
 import android.widget.TextView;
 
+import com.android.uct.UCTConfig;
 import com.lauren.simplenews.DrawerLayout.DrawerLayoutTest;
 import com.lauren.simplenews.async.TestAsyncTaskActivity;
+import com.lauren.simplenews.download.DownLoadActivity;
 import com.lauren.simplenews.main.widget.MainActivity;
 import com.lauren.simplenews.okhttp.OkhttpTestActivity;
 import com.lauren.simplenews.recyclerview.RecyclerViewTest;
+import com.lauren.simplenews.view.TestViewActivity;
 
 /**
  * Created by xxnan on 2016/5/19.
@@ -26,14 +29,20 @@ public class MainListActivity extends AppCompatActivity {
     private ListView listView;
     private ListAdapter adapter;
     private Class<Activity>[] classList=new Class[]{MainActivity.class,DrawerLayoutTest.class,
-            RecyclerViewTest.class,MainRecycleViewActivity.class, OkhttpTestActivity.class,TestAsyncTaskActivity.class};
+            RecyclerViewTest.class,MainRecycleViewActivity.class, OkhttpTestActivity.class,TestAsyncTaskActivity.class,TestViewActivity.class,DownLoadActivity.class};
     private String [] title=new String[]{"新闻主界面","DrawerLayout策滑",
-            "RecyclerView测试","RecyclerView主界面测试","OkHttp测试","AsyncTask测试"};
+            "RecyclerView测试","RecyclerView主界面测试","OkHttp测试","AsyncTask测试","自定义view","DownLoadManager测试"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.main);
         initView();
+        UCTConfig cfg = new UCTConfig();
+        cfg.uct_iSysRunType = 1;
+        cfg.is_Awp_lib = 1;
+        cfg.uct_use_double_thread_for_audio = 0;
+        cfg.uct_echo = 1;
+        cfg.uct_iSysNatTime = 1;
     }
     private void initView()
     {

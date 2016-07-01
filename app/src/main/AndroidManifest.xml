@@ -59,7 +59,18 @@
     </activity> <activity
         android:name=".async.TestAsyncTaskActivity"
         >
+    </activity> <activity
+        android:name=".view.TestViewActivity"
+        >
     </activity>
+        <activity
+            android:name=".download.DownLoadActivity"
+            >
+        </activity>
+        <service
+            android:name=".download.DownLoadService"
+            >
+        </service>
 
     </application>
 
