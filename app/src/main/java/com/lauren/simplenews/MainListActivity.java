@@ -15,6 +15,7 @@ import android.widget.TextView;
 
 import com.android.uct.UCTConfig;
 import com.lauren.simplenews.DrawerLayout.DrawerLayoutTest;
+import com.lauren.simplenews.SwipeRefreshLayout.TestSwipeRefreshLayoutActivity;
 import com.lauren.simplenews.async.TestAsyncTaskActivity;
 import com.lauren.simplenews.download.DownLoadActivity;
 import com.lauren.simplenews.main.widget.MainActivity;
@@ -29,9 +30,9 @@ public class MainListActivity extends AppCompatActivity {
     private ListView listView;
     private ListAdapter adapter;
     private Class<Activity>[] classList=new Class[]{MainActivity.class,DrawerLayoutTest.class,
-            RecyclerViewTest.class,MainRecycleViewActivity.class, OkhttpTestActivity.class,TestAsyncTaskActivity.class,TestViewActivity.class,DownLoadActivity.class};
+            RecyclerViewTest.class,MainRecycleViewActivity.class, OkhttpTestActivity.class,TestAsyncTaskActivity.class,TestViewActivity.class,DownLoadActivity.class,TestSwipeRefreshLayoutActivity.class};
     private String [] title=new String[]{"新闻主界面","DrawerLayout策滑",
-            "RecyclerView测试","RecyclerView主界面测试","OkHttp测试","AsyncTask测试","自定义view","DownLoadManager测试"};
+            "RecyclerView测试","RecyclerView主界面测试","OkHttp测试","AsyncTask测试","自定义view","DownLoadManager测试","SwipeRefreshLayout测试"};
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);

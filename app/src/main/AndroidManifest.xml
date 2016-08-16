@@ -67,6 +67,10 @@
             android:name=".download.DownLoadActivity"
             >
         </activity>
+        <activity
+            android:name="com.lauren.simplenews.SwipeRefreshLayout.TestSwipeRefreshLayoutActivity"
+            >
+        </activity>
         <service
             android:name=".download.DownLoadService"
             >
